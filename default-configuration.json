@@ -1,0 +1,13 @@
+[{
+    "key": "apiHoliday",
+    "value": "https://holiday.bukaapi.com/"
+  },
+  {
+    "key": "apiQrGenerator",
+    "value": "https://qrgen.bukaapi.com/"
+  },
+  {
+    "key": "companyName",
+    "value": "PT Aksara Jaya Utama"
+  }
+]
