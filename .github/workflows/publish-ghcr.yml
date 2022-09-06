@@ -17,7 +17,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=ghcr.io/${GITHUB_REPOSITORY#*/}
+          DOCKER_IMAGE=ghcr.io/${{ github.repository_owner}}/${GITHUB_REPOSITORY#*/}
           VERSION=latest
           SHORTREF=${GITHUB_SHA::8}
           # If this is git tag, use the tag name as a docker tag
