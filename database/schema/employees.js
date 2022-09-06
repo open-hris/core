@@ -1,34 +1,37 @@
 const mongoose = require('mongoose')
 
-const EmployeesSchema = new mongoose.Schema({
-  name: {
-    type: String,
+const EmployeesSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+    },
+    email: {
+      type: String,
+      unique: true,
+    },
+    phoneNumber: {
+      type: String,
+    },
+    dateOfBirth: {
+      type: Date,
+    },
+    placeOfBirth: {
+      type: String,
+    },
+    gender: {
+      type: String,
+    },
+    maritalStatus: {
+      type: String,
+    },
+    identityAndAddress: identityAndAddress,
+    families: [families],
+    payrollInformation: payrollInformation,
   },
-  email: {
-    type: String,
-    unique: true,
-  },
-  phoneNumber: {
-    type: String,
-  },
-  dateOfBirth: {
-    type: Date,
-  },
-  placeOfBirth: {
-    type: String,
-  },
-  gender: {
-    type: String,
-  },
-  maritalStatus: {
-    type: String,
-  },
-  identityAndAddress: identityAndAddress,
-  families: [families],
-  payrollInformation: payrollInformation,
-}, {
-  timestamps: true
-})
+  {
+    timestamps: true
+  }
+)
 
 const identityAndAddress = new mongoose.Schema({
   identityNumber: {

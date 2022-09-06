@@ -8,4 +8,6 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.use('/general', require('./general'));
+
 module.exports = router;
