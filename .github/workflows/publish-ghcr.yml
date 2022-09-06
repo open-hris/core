@@ -40,9 +40,11 @@ jobs:
           platforms: all
 
       - name: Authenticate Github Container Registry
-        uses: google-github-actions/auth@v0
+        uses: docker/login-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure Docker CLient
         run: |-
